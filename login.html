@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url('background.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        form {
+            text-align: center;
+        }
+
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+            position: absolute;
+            top: -200px;
+            left:-80px;
+            filter: brightness(0%);
+        }
+
+        .logo {
+            width: 550px;
+            height: 500px;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+        <div class="header">
+                <img src="logo4.png" alt="Health Solutions Logo" class="logo">
+                <div class="content">
+                    
+                </div>
+        </div>
+    <div class="form-container">
+        <h2>Login</h2>
+        
+            <label for="username">Username:</label>
+            <input type="text" name="username" required id="username"><br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" required id="password"><br>
+
+            <input type="submit" value="Login" onclick="myfun()">
+        
+    </div>
+
+
+
+
+
+    <script>
+        function myfun(){
+    let username=document.getElementById('username').value
+    let password=document.getElementById('password').value 
+    if (username=="admin" && password=="admin"){
+        window.location="home.html"
+    }
+    else{
+        alert("Invalid Credientials")
+    }
+    }
+    </script>
+</body>
+</html>
